@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// import React from 'react';
+// import { ReactComponent as logo } from 'src/icons/FF-Logo.svg';
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">

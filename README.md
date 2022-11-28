@@ -1,5 +1,5 @@
 # Fluent Finance UI
-FF React UI with TypeScript
+Fluent Finance React UI with JavaScript
 
 ## Getting Started with Create React App
 

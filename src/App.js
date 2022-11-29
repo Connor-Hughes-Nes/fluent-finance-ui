@@ -1,26 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import AuthProvider from './providers/Auth.provider';
+import Login from './components/authentication/Login';
+import { Input } from './components/commonComponents/Input';
 
 // import React from 'react';
 // import { ReactComponent as logo } from 'src/icons/FF-Logo.svg';
 
+const style = {
+  height: '100%',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center'
+};
+
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={style}>
+      <AuthProvider>
+        {/*<Login />*/}
+        <Input />
+      </AuthProvider>
+
     </div>
   );
 }

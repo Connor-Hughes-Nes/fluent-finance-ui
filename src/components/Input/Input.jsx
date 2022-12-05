@@ -1,5 +1,7 @@
 import React, { createRef, useMemo } from 'react';
 
+import './input.scss';
+
 export const Input = ({
   id,
   name,
@@ -18,9 +20,9 @@ export const Input = ({
 
   const handleChange = (e) => {
     let val = e.target.value;
-    val = getValueChange(name, val)
+    val = getValueChange(name, val);
     onChange(val);
-  }
+  };
 
   return (
     <div className="input">

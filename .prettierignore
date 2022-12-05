@@ -1,0 +1,14 @@
+node_modules
+__deprecated__
+tmp
+log
+./public
+storage
+spec
+*.json
+*.yml
+*.md
+*.scss
+*.css
+coverage
+build/

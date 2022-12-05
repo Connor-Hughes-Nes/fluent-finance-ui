@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Input } from 'src/components/commonComponents/Input.jsx'
+import { Input } from '../Input/Input.jsx';
 import { Button } from '../button/Button';
 // import { Route, Router } from 'react-router-dom';
 
 const serverify = ({ email, password }) => ({
   email,
   password
-})
+});
 
 const Login = ({ onLogin }) => {
   const [form, setForm] = useState(undefined);
@@ -38,13 +38,10 @@ const Login = ({ onLogin }) => {
         />
       </form>
       <section className="form-action">
-        <Button
-          type="submit"
-          onClick={onSubmit}
-        />
+        <Button type="submit" onClick={onSubmit} />
       </section>
     </section>
-)
+  );
 };
 
 export default Login;

@@ -14,12 +14,9 @@ const LoginContainer = () => {
   const onLogin = (accountDetails) => {
     setLoading(true);
     // dispatch(authenticate(accountDetails, navigate, () => setLoading(false)));
-  }
+  };
 
-  return (
-    <Login onLogin={onLogin}/>
-  );
-}
+  return <Login onLogin={onLogin} />;
+};
 
 export default LoginContainer;
-

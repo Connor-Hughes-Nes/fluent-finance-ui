@@ -2,7 +2,7 @@ import { API_HOST } from './index';
 
 const getAuthenticateEndpoint = () => `${API_HOST}/authenticate`;
 export const getAuthenticationRequest = (credentials) => [
-  getAuthenticateEndpoint(),
+  getAuthenticateEndpoint()
   // getHttpPostOptions(credentials)
   // use something like src/containers/auth/Auth.container.tsx in BSM
 

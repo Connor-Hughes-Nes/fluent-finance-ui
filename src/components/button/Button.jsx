@@ -1,11 +1,19 @@
 import React from 'react';
 
+import './button.scss'
+
 export const Button = ({ label, type, onClick }) => {
+
+  //TODO Defining modifiers?
+
   return (
-    <button className="button">
-      type={type}
-      onClick={onClick}
-      label={label}
+    <button placeholder={label} onClick={onClick} type={type} className="button">
+      {/*label*/}
+      Login
+    {/*  ??  */}
     </button>
   );
 };
+
+
+

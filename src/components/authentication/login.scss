@@ -1,0 +1,41 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/login-bg-image.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Montserrat;
+
+  h1 {
+    margin: 0 0 0 100px;
+    padding-top: 150px;
+    color: white;
+    font-size: 59px;
+  }
+
+  //TODO: Create base font size file for all <h> tags
+  // + check setting styles to the class instead of classes
+  // font colour for input fields
+
+  h3 {
+    margin: 32px 0 0 100px;
+    color: white;
+    padding-bottom: 60px;
+  }
+
+  &__form {
+    margin-left: 42px;
+    color: white;
+
+    button {
+      margin-left: 42px;
+    }
+
+  }
+
+  &__background {
+    //background-image: "url(src/icons/login-bg-image.svg)"
+  }
+}
+

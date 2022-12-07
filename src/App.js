@@ -1,6 +1,6 @@
 import './App.css';
 import AuthProvider from './providers/Auth.provider';
-import Login from './components/authentication/Login';
+// import Login from './components/authentication/Login';
 import { Input } from './components/Input/Input';
 
 // import React from 'react';

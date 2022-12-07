@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 import { Input } from '../Input/Input.jsx';
 import { Button } from '../button/Button';
-// import { Route, Router } from 'react-router-dom';
+// // import { Route, Router } from 'react-router-dom';
+//
+// import {ReactComponent as logo} from '../../icons/FF-Logo.svg';
+// import {ReactComponent as BgImage} from '/public/login-bg-image.svg';
+
+import './login.scss'
 
 const serverify = ({ email, password }) => ({
   email,
@@ -18,9 +23,17 @@ const Login = ({ onLogin }) => {
     onLogin(accountDetails);
   };
 
+  //TODO: Background image
+
   return (
     <section className="login">
-      <form className="login-form">
+      <div className="login__background">
+        {/*<img className="logo" alt="Background" src={BgImage} />*/}
+      </div>
+      {/*<img className="logo" alt="Background" src={logo} />*/}
+      <h1>Login</h1>
+      <h3>Create an Account and Login</h3>
+      <form className="login__form">
         <Input
           name="email"
           label="Email Address"
@@ -29,16 +42,18 @@ const Login = ({ onLogin }) => {
           value={form?.email}
           onChange={handleChange}
         />
+        <br/>
         <Input
           name="password"
           label="Password"
+          type="password"
           placeholder="Password"
           value={form?.password}
           onChange={handleChange}
         />
       </form>
       <section className="form-action">
-        <Button type="submit" onClick={onSubmit} />
+        <Button placeholder="Login" label="Login" type="submit" onClick={onSubmit} />
       </section>
     </section>
   );

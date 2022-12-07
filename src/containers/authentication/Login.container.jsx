@@ -13,7 +13,7 @@ const LoginContainer = () => {
 
   const onLogin = (accountDetails) => {
     setLoading(true);
-    // dispatch(authenticate(accountDetails, navigate, () => setLoading(false)));
+    dispatch(authenticate(accountDetails, navigate, () => setLoading(false)));
   };
 
   return <Login onLogin={onLogin} />;

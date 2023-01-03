@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   font-family: Montserrat;
 
+
+  display: block; //TODO: Check
+
   h1 {
     margin: 0 0 0 100px;
     padding-top: 150px;
@@ -18,10 +21,17 @@
   // + check setting styles to the class instead of classes
   // font colour for input fields
 
+  //TODO: Style components with base styles
+  // then do per page styles with classNames
+
   h3 {
     margin: 32px 0 0 100px;
     color: white;
     padding-bottom: 60px;
+  }
+
+  .multi-colour {
+    color: red;
   }
 
   &__form {
@@ -32,6 +42,11 @@
       margin-left: 42px;
     }
 
+  }
+
+  &__form-action {
+    margin-top: 45px;
+    margin-left: 90px;
   }
 
   &__background {

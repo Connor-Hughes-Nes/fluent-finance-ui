@@ -1,5 +1,5 @@
 export const initialState = {};
 
-export const authReducer = (state = initialState, _action) => {
+export const authReducer = (state = initialState) => {
   return state;
 };

@@ -23,16 +23,12 @@ const Login = ({ onLogin }) => {
     onLogin(accountDetails);
   };
 
-  //TODO: Background image
+  //TODO: Style components with classnames, not the component itself
 
   return (
     <section className="login">
-      <div className="login__background">
-        {/*<img className="logo" alt="Background" src={BgImage} />*/}
-      </div>
-      {/*<img className="logo" alt="Background" src={logo} />*/}
       <h1>Login</h1>
-      <h3>Create an Account and Login</h3>
+      <h3>Create an Account and <span className="multi-colour">Login</span></h3>
       <form className="login__form">
         <Input
           name="email"
@@ -52,7 +48,7 @@ const Login = ({ onLogin }) => {
           onChange={handleChange}
         />
       </form>
-      <section className="form-action">
+      <section className="login__form-action">
         <Button placeholder="Login" label="Login" type="submit" onClick={onSubmit} />
       </section>
     </section>

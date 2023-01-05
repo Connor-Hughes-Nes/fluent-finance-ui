@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
 import Login from '../../components/authentication/Login';
-
-// import { authenticate } from '../../actions/auth.actions';
+import { authenticate } from '../../actions/auth.actions';
 
 const LoginContainer = () => {
   const dispatch = useDispatch();
@@ -16,7 +14,9 @@ const LoginContainer = () => {
     dispatch(authenticate(accountDetails, navigate, () => setLoading(false)));
   };
 
-  return <Login onLogin={onLogin} />;
+  return (
+    <Login onLogin={onLogin} />
+  );
 };
 
 export default LoginContainer;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { all, call, put, takeLatest } from '@redux-saga/core/effects';
+import { call, put, takeLatest } from '@redux-saga/core/effects';
 
 import {
   AUTHENTICATE
@@ -36,5 +36,11 @@ export function* performAuthentication({ credentials, navigate, onComplete }) {
 
 export function* watchForAuthRequest() {
   yield takeLatest(AUTHENTICATE, performAuthentication);
+}
+
+export default function* authSaga() {
+  yield ([ //all
+    watchForAuthRequest()
+  ]);
 }
 

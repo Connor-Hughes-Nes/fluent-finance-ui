@@ -7,7 +7,7 @@ import { Button } from '../button/Button';
 // import {ReactComponent as logo} from '../../icons/FF-Logo.svg';
 // import {ReactComponent as BgImage} from '/public/login-bg-image.svg';
 
-import './login.scss'
+import './login.scss';
 
 const serverify = ({ email, password }) => ({
   email,
@@ -28,7 +28,9 @@ const Login = ({ onLogin }) => {
   return (
     <section className="login">
       <h1>Login</h1>
-      <h3>Create an Account and <span className="multi-colour">Login</span></h3>
+      <h3>
+        Create an Account and <span className="multi-colour">Login</span>
+      </h3>
       <form className="login__form">
         <Input
           name="email"
@@ -38,7 +40,7 @@ const Login = ({ onLogin }) => {
           value={form?.email}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         <Input
           name="password"
           label="Password"

@@ -1,4 +1,4 @@
-import { getHttpPostOptions,  } from '@neslotech/utils';
+import { getHttpPostOptions } from '@neslotech/utils';
 
 // getHttpPutOptions
 // getHttpGetOptions

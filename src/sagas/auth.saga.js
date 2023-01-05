@@ -2,13 +2,9 @@ import axios from 'axios';
 
 import { call, put, takeLatest } from '@redux-saga/core/effects';
 
-import {
-  AUTHENTICATE
-} from '../actions/auth.actions';
+import { AUTHENTICATE } from '../actions/auth.actions';
 
-import {
-  getAuthenticationRequest,
-} from '../tools/api/auth.endpoints'
+import { getAuthenticationRequest } from '../tools/api/auth.endpoints';
 import { setAuthTokenCookie } from '../tools/auth.utils';
 import { addSystemNotice } from '../actions/system.actions';
 
@@ -39,8 +35,8 @@ export function* watchForAuthRequest() {
 }
 
 export default function* authSaga() {
-  yield ([ //all
+  yield [
+    //all
     watchForAuthRequest()
-  ]);
+  ];
 }
-

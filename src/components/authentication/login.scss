@@ -6,6 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   font-family: Montserrat;
+  box-sizing: border-box;
 
 
   display: block; //TODO: Check
@@ -31,7 +32,7 @@
   }
 
   .multi-colour {
-    color: red;
+    color: #F66763;
   }
 
   &__form {
@@ -41,7 +42,6 @@
     button {
       margin-left: 42px;
     }
-
   }
 
   &__form-action {

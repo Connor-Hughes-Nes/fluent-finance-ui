@@ -5,4 +5,4 @@ export const authenticate = (accountDetails, navigate, onComplete) => ({
   accountDetails,
   navigate,
   onComplete
-})
+});

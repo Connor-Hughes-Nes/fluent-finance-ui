@@ -1,0 +1,19 @@
+.dashboard-card {
+  display: flex;
+  width: 340px;
+  height: 354px;
+  border: solid 1px rgba(#FEFEFE);
+  cursor: pointer;
+  justify-content: space-between;
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__action {
+
+  }
+
+}

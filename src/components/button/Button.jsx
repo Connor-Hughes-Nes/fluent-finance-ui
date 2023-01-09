@@ -7,9 +7,7 @@ export const Button = ({ label, type, onClick }) => {
 
   return (
     <button placeholder={label} onClick={onClick} type={type} className="button">
-      {/*label*/}
-      Login
-      {/*  ??  */}
+      {label}
     </button>
   );
 };

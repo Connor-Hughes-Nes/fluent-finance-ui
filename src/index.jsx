@@ -13,6 +13,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import Login from './components/authentication/Login';
+// import Dashboard from './components/dashboard/Dashboard';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
@@ -23,7 +24,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/*<Dashboard />*/}
         <Login />
+      {/*  App*/}
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  //width: calc(100% - 6rem);
+  width: 1161px;
+  border: 1px solid black;
+  justify-content: center;
+  background-color: black;
+  height: 80px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+  &__nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    //margin-right: auto;
+    color: white;
+
+    //> ul {
+    //  display: block;
+    //  justify-content: right;
+    //
+    //  li + li {
+    //    margin-left: 5rem;
+    //  }
+    //}
+    //
+    //&__actions {
+    //  display: flex;
+    //  align-items: center;
+    //}
+    //
+    //&__children {
+    //  //display: none;
+    //
+    //  display: block;
+    }
+}

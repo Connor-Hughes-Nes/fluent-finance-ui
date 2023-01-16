@@ -1,6 +1,8 @@
 import React from 'react'
 import DashboardCard from './DashboardCard';
 
+import './dashboard.scss'
+
 const Dashboard = () => {
 
   return (
@@ -9,18 +11,19 @@ const Dashboard = () => {
         <header className="dashboard__header">
           <h2 className="dashboard__title">Welcome to Fluent Finance</h2>
           <main onChange="dashboard__cards">
-            <DashboardCard
-              title="Budget"
-              path="/budget"
-            />
-            <DashboardCard
-              title="Transactions"
-              path="/transactions"
-            />
-            <DashboardCard
-              title="Meeting Budget"
-              path="/"
-            />
+            <h1>Test</h1>
+            {/*<DashboardCard*/}
+            {/*  title="Budget"*/}
+            {/*  path="/budget"*/}
+            {/*/>*/}
+            {/*<DashboardCard*/}
+            {/*  title="Transactions"*/}
+            {/*  path="/transactions"*/}
+            {/*/>*/}
+            {/*<DashboardCard*/}
+            {/*  title="Meeting Budget"*/}
+            {/*  path="/"*/}
+            {/*/>*/}
           </main>
         </header>
       </section>

@@ -8,7 +8,6 @@ export const Input = ({
   label,
   onChange,
   value
-  // hidden
 }) => {
   const wrapperRef = createRef();
 

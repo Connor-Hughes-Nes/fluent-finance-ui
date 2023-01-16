@@ -9,11 +9,11 @@ import reportWebVitals from './reportWebVitals';
 import rootReducer from './reducers';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
-// import {configureStore} '@reduxjs/toolkit'
+
+import Login from './components/authentication/Login';
 
 import './index.css';
-import Login from './components/authentication/Login';
-// import Dashboard from './components/dashboard/Dashboard';
+import UserContainer from './containers/User.container';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
@@ -24,8 +24,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        {/*<Dashboard />*/}
-        <Login />
+        {/*<DashboardCard />*/}
+        <UserContainer />
       {/*  App*/}
       </BrowserRouter>
     </Provider>

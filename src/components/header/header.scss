@@ -1,21 +1,29 @@
 .header {
   display: flex;
-  //width: calc(100% - 6rem);
-  width: 1161px;
-  border: 1px solid black;
-  justify-content: center;
+  width: 100%;
+  border: 1px solid white;
+  justify-content: flex-end;
   background-color: black;
   height: 80px;
-  position: fixed;
+  //position: fixed;
   z-index: 2;
   top: 0;
+
+  //&__title {
+  //
+  //}
 
   &__nav-items {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    //margin-right: auto;
+    //justify-content: center;
+    margin-right: 50px;
     color: white;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+    }
 
     //> ul {
     //  display: block;
@@ -26,10 +34,7 @@
     //  }
     //}
     //
-    //&__actions {
-    //  display: flex;
-    //  align-items: center;
-    //}
+
     //
     //&__children {
     //  //display: none;

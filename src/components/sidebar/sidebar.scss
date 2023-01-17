@@ -1,0 +1,22 @@
+.sidebar {
+  display: flex;
+  background-color: black;
+  border: solid 1px white;
+  z-index: 1;
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__items {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+.sidebar-item {
+
+}

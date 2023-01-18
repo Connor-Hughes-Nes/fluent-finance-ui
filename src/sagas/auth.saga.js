@@ -21,8 +21,8 @@ export function* performAuthentication({ credentials, navigate, onComplete }) {
     const { auth_token } = data;
     yield call(setAuthTokenCookie, auth_token);
 
-    // navigate to organisation switch page
-    yield call(navigate, '/organisation-selection');
+    // navigate to dashboard
+    yield call(navigate, '/dashboard');
   } catch (error) {
     yield put(addSystemNotice('The email address or password is incorrect.'));
   } finally {

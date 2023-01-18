@@ -11,7 +11,6 @@ const Dashboard = () => {
         <header className="dashboard__header">
           <h2 className="dashboard__title">Welcome to Fluent Finance</h2>
           <main onChange="dashboard__cards">
-            <h1>Test</h1>
             {/*<DashboardCard*/}
             {/*  title="Budget"*/}
             {/*  path="/budget"*/}

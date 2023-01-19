@@ -1,7 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Dashboard from '../../components/dashboard/Dashboard';
-import DashboardCard from '../../components/dashboard/DashboardCard';
 import Header from '../../components/header/Header';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { ReactComponent as HomeIcon} from '../../icons/home-icon.svg';
@@ -33,13 +31,10 @@ const DashboardContainer = () => {
 
   return (
     <main>
-      <div>
-        <Sidebar items={items}/>
-        <Header />
-        <Dashboard />
-      </div>
+      <Sidebar items={items}/>
+      <Header />
+      <Dashboard />
     </main>
-
   )
 }
 

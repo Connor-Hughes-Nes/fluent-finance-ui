@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: Montserrat, serif;
+  //font-family: Montserrat, sans-serif;
   box-sizing: border-box;
 
   display: block; //TODO: Check
@@ -16,10 +16,6 @@
     color: white;
     font-size: 59px;
   }
-
-  //TODO: Create base font size file for all <h> tags
-  // + check setting styles to the class instead of classes
-  // font colour for input fields
 
   //TODO: Style components with base styles
   // then do per page styles with classNames

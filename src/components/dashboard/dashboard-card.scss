@@ -4,16 +4,20 @@
   height: 354px;
   border: solid 1px #FEFEFE;
   cursor: pointer;
-  justify-content: space-between;
+
+  //flex-direction: row;
+  margin-left: 80px;
+  margin-top: 59px;
 
   &__detail {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
   }
 
   &__action {
-
+    margin: 275px 0 0 40px;
+    text-decoration: none;
   }
 
 }

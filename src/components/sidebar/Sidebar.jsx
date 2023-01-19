@@ -10,6 +10,9 @@ const Item = ({ link, label, icon }) => (
   <li id={label} className='sidebar-item'>
     <Link to={link}>
       {icon}
+      <span>
+        {label}
+      </span>
     </Link>
   </li>
 );

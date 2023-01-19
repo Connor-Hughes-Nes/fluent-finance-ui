@@ -38,9 +38,6 @@ const DashboardContainer = () => {
         <Header />
         <Dashboard />
       </div>
-      {/*<div>*/}
-      {/*  <h1>Test Content</h1>*/}
-      {/*</div>*/}
     </main>
 
   )

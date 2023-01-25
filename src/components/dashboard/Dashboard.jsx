@@ -21,11 +21,11 @@ const Dashboard = () => {
               path="/budget"
               icon={<BudgetIcon/>}
             />
-            <DashboardCard
-              title="Transactions"
-              path="/transactions"
-              icon={<TransactionIcon/>}
-            />
+            {/*<DashboardCard*/}
+            {/*  title="Transactions"*/}
+            {/*  path="/transactions"*/}
+            {/*  icon={<TransactionIcon/>}*/}
+            {/*/>*/}
             {/*<DashboardCard*/}
             {/*  title="Meeting Budget"*/}
             {/*  path="/"*/}

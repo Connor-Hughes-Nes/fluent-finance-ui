@@ -1,7 +1,7 @@
 .dashboard {
   display: flex;
-  width: 1040px;
-  height: 713px;
+  width: 1139px;
+  height: 653px;
   background-color: #1F1F1F;
   padding-top: 60px;
   padding-left: 100px;
@@ -21,11 +21,11 @@
   &__title {
     color: white;
     margin-bottom: 40px;
-    font-size: 60px;
+    font-size: 50px;
   }
 
   &__cards {
-    display: flex;
+    //display: flex;
     flex-direction: row;
   }
 }

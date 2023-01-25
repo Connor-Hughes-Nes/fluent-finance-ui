@@ -1,23 +1,40 @@
 .dashboard-card {
   display: flex;
-  width: 340px;
-  height: 354px;
+  width: 240px;
+  height: 270px;
   border: solid 1px #FEFEFE;
-  cursor: pointer;
+  padding: 40px 56px 40px 40px;
 
-  //flex-direction: row;
-  margin-left: 80px;
-  margin-top: 59px;
+  flex-direction: column;
 
   &__detail {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    padding-left: 18px;
+    color: #FEFEFE;
+  }
+
+  &__icon {
+    padding-top: 3px;
   }
 
   &__action {
-    margin: 275px 0 0 40px;
+    //display: flex;
+    //margin-top: 220px;
+    //margin-left: 40px;
     text-decoration: none;
   }
 
+  & > p {
+    color: #FEFEFE;
+    font-size: 18px;
+    line-height: 200%;
+  }
+
+  & > .button {
+    margin-top: 50px;
+  }
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import DashboardCard from './DashboardCard';
 import { ReactComponent as HomeIcon} from '../../icons/home-icon.svg';
-import { ReactComponent as BudgetIcon} from '../../icons/budget-icon.svg';
-import { ReactComponent as TransactionIcon} from '../../icons/transaction-icon.svg';
+import {ReactComponent as BudgetIcon} from '../../icons/budget-bdage-icon.svg';
+import {ReactComponent as TransactionIcon} from '../../icons/transaction-badge-icon.svg';
+
 
 import './dashboard.scss'
 
@@ -15,16 +16,16 @@ const Dashboard = () => {
           <h2 className="dashboard__title">Welcome to Fluent Finance</h2>
           <main onChange="dashboard__cards">
             <DashboardCard
-              // items={}
-              label="Budget"
+              title="Budget"
+              // label="Budget"
               path="/budget"
               icon={<BudgetIcon/>}
             />
-            {/*<DashboardCard*/}
-            {/*  title="Transactions"*/}
-            {/*  path="/transactions"*/}
-            {/*  icon={<TransactionIcon/>}*/}
-            {/*/>*/}
+            <DashboardCard
+              title="Transactions"
+              path="/transactions"
+              icon={<TransactionIcon/>}
+            />
             {/*<DashboardCard*/}
             {/*  title="Meeting Budget"*/}
             {/*  path="/"*/}

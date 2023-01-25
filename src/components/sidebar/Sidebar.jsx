@@ -50,14 +50,14 @@ Sidebar.defaultProps = {
   items: []
 };
 
-Sidebar.propTypes = {
-  items: arrayOf(
-    shape({
-      icon: node,
-      title: string.isRequired,
-      link: string.isRequired
-    })
-  )
-};
+// Sidebar.propTypes = {
+//   items: arrayOf(
+//     shape({
+//       icon: node,
+//       title: string.isRequired,
+//       link: string.isRequired
+//     })
+//   )
+// };
 
 export default Sidebar;

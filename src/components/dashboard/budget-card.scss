@@ -1,0 +1,25 @@
+.budget-card {
+  display: inline-block;
+  width: 220px;
+  height: 450px;
+  border: solid 1px #FEFEFE;
+
+  padding: 20px;
+  margin-bottom: 100px;
+  position: absolute;
+  align-items: center;
+
+  &__percent {
+    color: #F66763;
+    padding-left: 50px;
+  }
+
+
+  &__title {
+    color: #FEFEFE;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 24px;
+
+  }
+}

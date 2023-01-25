@@ -6,14 +6,14 @@ import { noOp } from '@neslotech/utils';
 
 import './dashboard-card.scss'
 
-const DashboardCard = ({ title, path, icon }) => (
+const DashboardCard = ({ title, path, icon, content }) => (
 
   <article className="dashboard-card">
     <section className="dashboard-card__detail">
       <section className="dashboard-card__icon">{icon}</section>
       <h4 className="dashboard-card__title">{title}</h4>
     </section>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis in mi elementum sed mattis </p>
+    <p> {content} </p>
     <Button placeholder="Get Started" label="Get Started" type="submit" onClick={path} />
   </article>
 );

@@ -1,12 +1,14 @@
 .dashboard {
   display: flex;
-  //align-items: flex-end;
-  width: 1201px;
+  width: 1040px;
   height: 713px;
   background-color: #1F1F1F;
-  margin-left: 260px;
+  padding-top: 60px;
+  padding-left: 100px;
+  margin-left: 200px;
   position: fixed;
 
+  //flex-direction: row;
 
   &__actions {
 
@@ -18,8 +20,8 @@
 
   &__title {
     color: white;
-    margin: 100px 0 0 80px ;
-    font-size: 45px;
+    margin-bottom: 40px;
+    font-size: 60px;
   }
 
   &__cards {

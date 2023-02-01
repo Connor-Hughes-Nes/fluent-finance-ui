@@ -9,18 +9,19 @@
   font-size: 13px;
   letter-spacing: 1.6px;
   cursor: pointer;
-
-  box-shadow: none;
-  backdrop-filter: none;
   font-family: Montserrat, sans-serif;
 
-  //padding-top: 10px;
-  //margin-top: 45px;
-  //margin-left: 45px;
+  outline: none !important;
 
-  button {
-    box-shadow: none;
-    input, button { border:none; }
+  button, button:focus{
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+  }
 
+  button:active{
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
   }
 }

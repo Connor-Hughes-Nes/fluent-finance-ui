@@ -1,14 +1,12 @@
 .dashboard {
-  display: flex;
-  width: 1040px;
-  height: 713px;
+  //display: flex;
+  width: 1139px;
+  height: 653px;
   background-color: #1F1F1F;
   padding-top: 60px;
   padding-left: 100px;
   margin-left: 200px;
   position: fixed;
-
-  //flex-direction: row;
 
   &__actions {
 
@@ -20,12 +18,14 @@
 
   &__title {
     color: white;
-    margin-bottom: 40px;
-    font-size: 60px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
   }
 
   &__cards {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
   }
 }

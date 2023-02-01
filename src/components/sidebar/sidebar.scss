@@ -10,11 +10,11 @@
 
   &__items {
     margin-top: 60px;
-    margin-left: 60px;
+    margin-left: 50px;
   }
 
   &__logo {
-    padding-left: 47px;
+    padding-left: 40px;
     padding-top: 32px;
   }
 }
@@ -23,6 +23,8 @@
   display: flex;
   margin-bottom: 45px;
   color: white;
+  font-family: Montserrat, sans-serif;
+
 
   & > a {
     display: flex;

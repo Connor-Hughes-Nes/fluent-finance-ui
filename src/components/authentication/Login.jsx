@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 import { Input } from '../Input/Input.jsx';
 import { Button } from '../button/Button';
@@ -9,6 +11,7 @@ import { Button } from '../button/Button';
 
 import './login.scss';
 
+
 const serverify = ({ email, password }) => ({
   email,
   password
@@ -17,6 +20,7 @@ const serverify = ({ email, password }) => ({
 const Login = ({ onLogin }) => {
   const [form, setForm] = useState(undefined);
   const handleChange = (newState) => setForm({ ...form, ...newState });
+  const navigate = useNavigate();
 
   const onSubmit = () => {
     const accountDetails = serverify(form);
@@ -51,7 +55,7 @@ const Login = ({ onLogin }) => {
         />
       </form>
       <section className="login__form-action">
-        <Button placeholder="Login" label="Login" type="submit" onClick={onSubmit} />
+        <Button placeholder="Login" label="Login" type="submit" onClick={() => navigate('/dashboard')} />
       </section>
     </section>
   );

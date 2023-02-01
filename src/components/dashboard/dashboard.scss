@@ -8,9 +8,6 @@
   margin-left: 200px;
   position: fixed;
 
-
-  //flex-direction: row;
-
   &__actions {
 
   }
@@ -30,13 +27,5 @@
 
   &__cards {
     display: inline-block;
-    //flex-wrap: nowrap;
-    //justify-content: space-between;
-    //flex: 1;
-    //flex-direction: row;
-
-    :last-of-type {
-      //padding-top: 40px;
-    }
   }
 }

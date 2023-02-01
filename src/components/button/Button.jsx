@@ -6,7 +6,7 @@ export const Button = ({ label, type, onClick }) => {
   //TODO Defining modifiers?
 
   return (
-    <button placeholder={label} onClick={onClick} type={type} className="button">
+    <button className="button" placeholder={label} onClick={onClick} type={type} >
       {label}
     </button>
   );

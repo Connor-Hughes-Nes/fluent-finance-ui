@@ -7,6 +7,7 @@ export const Input = ({
   name,
   label,
   onChange,
+  type,
   value
 }) => {
   const wrapperRef = createRef();
@@ -27,6 +28,7 @@ export const Input = ({
     <div className="input">
       <fieldset ref={wrapperRef} className="input__input-wrapper">
         <input
+          type={type}
           id={id ?? name}
           onChange={handleChange}
           name={name}

@@ -9,7 +9,7 @@ import './sidebar.scss'
 const Item = ({ link, label, icon }) => (
   <li id={label} className='sidebar-item'>
     <Link to={link}>
-      {icon}
+        {icon}
       <span>
         {label}
       </span>

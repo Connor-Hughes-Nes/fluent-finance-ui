@@ -1,12 +1,11 @@
 .budget {
-  width: 100vw;
-  height: 100vw;
+  width: 1139px;
+  height: 653px;
   background-color: #1F1F1F;
   padding-top: 60px;
   padding-left: 100px;
   margin-left: 200px;
   position: fixed;
-  //display: flex;
 
   &__title {
     color: white;
@@ -18,6 +17,7 @@
   }
 
   &__content {
-    margin-right: 700px;
+    //margin-right: 700px;
+    justify-content: left;
   }
 }

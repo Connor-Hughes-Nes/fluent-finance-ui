@@ -11,16 +11,15 @@
   cursor: pointer;
   font-family: Montserrat, sans-serif;
 
-  outline: none !important;
 
   button, button:focus{
-    outline: none;
     background: transparent;
     border: 1px solid transparent;
+    outline: 0;
   }
 
   button:active{
-    outline: none;
+    outline: 0;
     background: transparent;
     border: 1px solid transparent;
   }

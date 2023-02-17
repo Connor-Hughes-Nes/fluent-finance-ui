@@ -26,12 +26,12 @@ const items = [
 ];
 
 
-const DashboardContainer = () => {
+const DashboardContainer = (path) => {
   // const user = useSelector(({ user_store }) => user_store.user)
 
   return (
     <main>
-      <Sidebar items={items}/>
+      <Sidebar path={path} items={items}/>
       <Header />
       <Dashboard />
     </main>

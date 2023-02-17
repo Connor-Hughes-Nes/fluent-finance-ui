@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { arrayOf, node, shape, string } from 'prop-types';
 
 import { ReactComponent as Logo } from '../../icons/FF-logo-w-heading.svg';
 
 import './sidebar.scss'
 
-const Item = ({ link, label, icon }) => (
+const Item = ({ path, label, icon }) => (
   <li id={label} className='sidebar-item'>
-    <Link to={link}>
+    <Link to={path}>
         {icon}
       <span>
         {label}
@@ -27,7 +26,7 @@ const SidebarLogo = () => {
   );
 };
 
-const Sidebar = ({ items }) => {
+const Sidebar = ({ items, path }) => {
 
   return (
     <aside className="sidebar">
@@ -35,6 +34,7 @@ const Sidebar = ({ items }) => {
       <ul className="sidebar__items">
         {items.map(({ icon, label, link }) => (
           <Item
+            path={path}
             icon={icon}
             link={link}
             key={label}
@@ -49,15 +49,5 @@ const Sidebar = ({ items }) => {
 Sidebar.defaultProps = {
   items: []
 };
-
-// Sidebar.propTypes = {
-//   items: arrayOf(
-//     shape({
-//       icon: node,
-//       title: string.isRequired,
-//       link: string.isRequired
-//     })
-//   )
-// };
 
 export default Sidebar;

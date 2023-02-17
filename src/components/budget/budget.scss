@@ -1,20 +1,11 @@
-.dashboard {
-  //display: flex;
-  background-color: #1F1F1F;
+.budget {
   width: 1139px;
   height: 653px;
+  background-color: #1F1F1F;
   padding-top: 60px;
   padding-left: 100px;
   margin-left: 200px;
   position: fixed;
-
-  &__actions {
-
-  }
-
-  &__header {
-
-  }
 
   &__title {
     color: white;
@@ -25,7 +16,8 @@
     font-weight: 400;
   }
 
-  &__cards {
-    display: inline-block;
+  &__content {
+    //margin-right: 700px;
+    justify-content: left;
   }
 }

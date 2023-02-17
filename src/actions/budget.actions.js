@@ -17,13 +17,3 @@ export const loadBudget = (id, payload) => ({
   id,
   payload
 });
-
-
-
-// export const test = '[BUDGET_STORE] Load Budget';
-// export const test = '[BUDGET_STORE] Set Budget';
-// export const test = (id, payload) => ({
-//   type: test,
-//   id,
-//   payload
-// });

@@ -1,0 +1,23 @@
+.transaction {
+  width: 1139px;
+  height: 653px;
+  background-color: #1F1F1F;
+  padding-top: 60px;
+  padding-left: 100px;
+  margin-left: 200px;
+  position: fixed;
+
+  &__title {
+    color: white;
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__content {
+    //margin-right: 700px;
+    justify-content: left;
+  }
+}

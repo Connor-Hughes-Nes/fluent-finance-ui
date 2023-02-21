@@ -22,7 +22,7 @@ const Dashboard = () => {
               />
               <DashboardCard
                 title="Transactions"
-                path="/transactions"
+                path="/transaction"
                 content="Plan your monthly transactions to stay ahead of the curb!"
                 icon={<TransactionIcon/>}
               />

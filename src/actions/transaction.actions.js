@@ -4,9 +4,15 @@
 // actions are plain JavaScript object that must have a type attribute to indicate the type of action performed.
 
 export const LOAD_TRANSACTION = '[TRANSACTION_STORE] Load Transaction';
+
 export const SET_TRANSACTION = '[TRANSACTION_STORE] Set Transaction';
-export const loadTransaction = (id, payload) => ({
+export const loadTransaction = (onSuccess) => ({
   type: LOAD_TRANSACTION,
-  id,
+  onSuccess
+});
+
+export const UPDATE_TRANSACTION = '[TRANSACTION_STORE] Update Transaction';
+export const updateTransaction = (payload) => ({
+  type: UPDATE_TRANSACTION,
   payload
 });

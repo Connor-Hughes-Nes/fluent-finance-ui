@@ -12,9 +12,9 @@ const Budget = () => (
         <h2 className='budget__title'>Budget</h2>
         <main className='budget__content'>
           {/*TODO: Allow only numbers*/}
-          <Input type={number} label='enter your monthly income' name='income' />
-          <Input label='enter your budget' name='budget' />
-          <Input label='enter your expenses' name='expenses' />
+          {/*<Input type={number} label='enter your monthly income' name='income' />*/}
+          {/*<Input label='enter your budget' name='budget' />*/}
+          {/*<Input label='enter your expenses' name='expenses' />*/}
           {/*<Input label='enter your budget' name='budget' />*/}
         </main>
       </header>

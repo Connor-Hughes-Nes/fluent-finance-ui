@@ -2,14 +2,14 @@
   width: 1139px;
   height: 653px;
   background-color: #1F1F1F;
-  padding-top: 60px;
-  padding-left: 100px;
+  padding-top: 80px;
+  padding-left: 130px;
   margin-left: 200px;
   position: fixed;
 
   &__title {
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-size: 50px;
     font-family: Montserrat, sans-serif;
     font-style: normal;
@@ -17,7 +17,25 @@
   }
 
   &__content {
-    //margin-right: 700px;
+    display: flex;
+    margin-left: -45px;
     justify-content: left;
+    flex-direction: column;
+
+    &-money {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+    }
+
+    &-actions {
+      margin-left: 50px;
+      margin-top: 66px;
+    }
+
+    .input {
+      padding-top: 20px;
+      margin-top: 10px;
+    }
   }
 }

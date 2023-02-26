@@ -5,33 +5,34 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import { ReactComponent as HomeIcon} from '../../icons/home-icon.svg';
 import { ReactComponent as BudgetIcon} from '../../icons/budget-icon.svg';
 import { ReactComponent as TransactionIcon} from '../../icons/transaction-icon.svg';
-import { noOp } from '@neslotech/utils';
+import { useNavigate } from 'react-router-dom';
 
-const items = [
+const items = (navigate) => [
   {
     label: "Home",
     icon: <HomeIcon/>,
-    onClick: noOp
+    onClick: navigate('/dashboard')
   },
   {
     label: "Budget",
     icon: <BudgetIcon/>,
-    onClick: noOp
+    onClick: navigate('/budget')
   },
   {
     label: "Transactions",
     icon: <TransactionIcon/>,
-    onClick: noOp
+    onClick: navigate('/transactions')
   }
 ];
 
 
 const DashboardContainer = (path) => {
   // const user = useSelector(({ user_store }) => user_store.user)
+  const navigate = useNavigate();
 
   return (
     <main>
-      <Sidebar path={path} items={items}/>
+      <Sidebar path={path} items={items(navigate)}/>
       <Header />
       <Dashboard />
     </main>

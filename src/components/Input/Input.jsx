@@ -8,7 +8,9 @@ export const Input = ({
   label,
   onChange,
   type,
-  value
+  value,
+  // min_value,
+  // max_value
 }) => {
   const wrapperRef = createRef();
 

@@ -7,7 +7,10 @@ import { Button } from '../button/Button';
 const serverify = (form) => ({
   income: form.income,
   expense: form.expense,
-  budget: form.budget
+  budget: form.budget,
+  expense_type: form.expense_type,
+  transaction_amount: form.transaction_amount,
+
 });
 
 const Transaction = ({ onSave }) => {
@@ -23,6 +26,15 @@ const Transaction = ({ onSave }) => {
     setForm({ ...form, ...newState });
   }
 
+  //  "transaction_type"
+  //  "transaction_amount"
+  //  "total_income"
+  //  "expense"
+  //  "expense_date"
+  //  "income_type"
+  //  "expense_amount"
+  //  "expense_type"
+
   return (
     <article className='transaction'>
       <section className='transaction__actions'>
@@ -33,7 +45,9 @@ const Transaction = ({ onSave }) => {
               <Input value={form.income} type='number' label='enter your monthly income' name='income' onChange={handleChange} />
               <Input value={form.expense} type='number' label='enter your monthly expenses' name='expenses' onChange={handleChange} />
             </div>
-              <Input value={form.budget} type='number' label='enter your monthly budget' name='budget' onChange={handleChange} />
+            {/*<Input value={form.budget} type='number' label='enter your monthly budget' name='budget' onChange={handleChange} />*/}
+            {/*<Input value={form.transaction_amount} type='number' label='enter the transaction amount' name='expenses' onChange={handleChange} />*/}
+            {/*<Input value={form.expense_type} type='number' label='enter the expense type' name='transactionType' onChange={handleChange} />*/}
             <div className="transaction__content-actions">
               <Button placeholder="Calculate" label="Calculate" type="submit" onClick={handleSubmit} /> {/*onClick={() => navigate('/dashboard')}*/}
             </div>

@@ -10,9 +10,10 @@ const Budget = () => (
     <section className='budget__actions'>
       <header className="budget__header">
         <h2 className='budget__title'>Budget</h2>
+        <h4 className='budget__subtitle'>Monthly Budget</h4>
         <main className='budget__content'>
           {/*TODO: Allow only numbers*/}
-          {/*<Input type={number} label='enter your monthly income' name='income' />*/}
+          <Input type="number" label='monthly budget' name='budget' />
           {/*<Input label='enter your budget' name='budget' />*/}
           {/*<Input label='enter your expenses' name='expenses' />*/}
           {/*<Input label='enter your budget' name='budget' />*/}

@@ -16,8 +16,15 @@
     font-weight: 400;
   }
 
+  &__subtitle {
+    color: white;
+    padding-bottom: 30px;
+  }
+
   &__content {
+    color: white;
     //margin-right: 700px;
+    margin-left: -58px;
     justify-content: left;
   }
 }

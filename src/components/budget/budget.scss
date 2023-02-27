@@ -9,7 +9,7 @@
 
   &__title {
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     font-size: 50px;
     font-family: Montserrat, sans-serif;
     font-style: normal;
@@ -18,7 +18,12 @@
 
   &__subtitle {
     color: white;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+  }
+
+  &__text {
+    color: white;
+    padding-bottom: 20px;
   }
 
   &__content {

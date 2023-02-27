@@ -11,8 +11,8 @@ const Budget = () => (
       <header className="budget__header">
         <h2 className='budget__title'>Budget</h2>
         <h4 className='budget__subtitle'>Monthly Budget</h4>
+        <p className='budget__text'>Add a transaction to view your budget</p>
         <main className='budget__content'>
-          {/*TODO: Allow only numbers*/}
           <Input type="number" label='monthly budget' name='budget' />
           {/*<Input label='enter your budget' name='budget' />*/}
           {/*<Input label='enter your expenses' name='expenses' />*/}

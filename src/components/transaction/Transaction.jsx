@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Input } from '../Input/Input';
+import { Button } from '../button/Button';
 
 import './transaction.scss'
-import { Button } from '../button/Button';
 
 const serverify = (form) => ({
   income: form.income,
   expense: form.expense,
-  budget: form.budget,
-  expense_type: form.expense_type,
-  transaction_amount: form.transaction_amount,
-
+  // budget: form.budget,
+  // expense_type: form.expense_type,
+  // transaction_amount: form.transaction_amount,
 });
 
 const Transaction = ({ onSave }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [form, setForm] = useState({});
 
-  const handleSubmit = (newState) => {
+  const handleSubmit = () => {
     const payload = serverify(form);
     onSave(payload);
+    navigate('/dashboard')
   };
 
   const handleChange = (newState) => {

@@ -2,22 +2,34 @@
   width: 1139px;
   height: 653px;
   background-color: #1F1F1F;
-  padding-top: 60px;
-  padding-left: 100px;
+  padding-top: 80px;
+  padding-left: 130px;
   margin-left: 200px;
   position: fixed;
 
   &__title {
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     font-size: 50px;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 400;
   }
 
+  &__subtitle {
+    color: white;
+    padding-bottom: 50px;
+  }
+
+  &__text {
+    color: white;
+    padding-bottom: 20px;
+  }
+
   &__content {
+    color: white;
     //margin-right: 700px;
+    margin-left: -58px;
     justify-content: left;
   }
 }

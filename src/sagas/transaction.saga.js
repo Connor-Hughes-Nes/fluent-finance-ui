@@ -9,7 +9,7 @@ import { addSystemNotice } from '../actions/system.actions';
 
 import {
   LOAD_TRANSACTION,
-  SET_TRANSACTION
+  SET_TRANSACTION, UPDATE_TRANSACTION
 } from '../actions/transaction.actions';
 
 import { getLoadTransactionRequest } from '../tools/api/transaction.endpoints';
@@ -33,8 +33,31 @@ export function* watchForLoadTransactionRequest() {
   yield takeLatest(LOAD_TRANSACTION, performLoadTransaction);
 }
 
+export function* performUpdateTransaction({ id, payload, onSuccess }) {
+  try {
+    // get endpoint and http request options
+    const [endpoint, requestOptions] = getUpdateTransactionRequest(id, payload);
+
+    // make the request, no need to check the response
+    const { data } = yield call(axios, endpoint, requestOptions);
+
+    yield put({ type: SET_TRANSACTION, entry: data });
+
+    if (onSuccess) {
+      yield call(onSuccess);
+    }
+  } catch ({ response }) {
+    yield put(addSystemNotice(response.data.error, 'Error updating transaction'));
+  }
+}
+
+export function* watchForUpdateTransactionRequest() {
+  yield takeLatest(UPDATE_TRANSACTION, performUpdateTransaction);
+}
+
 export default function* TransactionSaga() {
   yield all([
-    watchForLoadTransactionRequest
+    watchForLoadTransactionRequest,
+    watchForUpdateTransactionRequest
   ]);
 }

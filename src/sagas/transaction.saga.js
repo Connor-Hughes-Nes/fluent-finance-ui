@@ -2,17 +2,17 @@
 // with resources outside of itself. Redux-Saga helps in: making HTTP requests. accessing browser storage.
 // executing I/O operations.
 
-import axios, { all } from 'axios';
-import { call, put, takeLatest } from '@redux-saga/core/effects';
+import axios from 'axios';
+import { all, call, put, takeLatest } from '@redux-saga/core/effects';
 
 import { addSystemNotice } from '../actions/system.actions';
+import { getLoadTransactionRequest, getUpdateTransactionRequest } from '../tools/api/transaction.endpoints';
 
 import {
   LOAD_TRANSACTION,
   SET_TRANSACTION, UPDATE_TRANSACTION
 } from '../actions/transaction.actions';
 
-import { getLoadTransactionRequest } from '../tools/api/transaction.endpoints';
 
 // TODO: how this loads but sets as the put action
 export function* performLoadTransaction({ id }) {
@@ -23,7 +23,7 @@ export function* performLoadTransaction({ id }) {
     // make the request, no need to check the response
     const { data } = yield call(axios, endpoint, requestOptions);
 
-    yield put({ type: SET_TRANSACTION, classes: data });
+    yield put({ type: SET_TRANSACTION, transaction: data });
   } catch ({ response }) {
     yield put(addSystemNotice(response.data.error));
   }
@@ -34,6 +34,7 @@ export function* watchForLoadTransactionRequest() {
 }
 
 export function* performUpdateTransaction({ id, payload, onSuccess }) {
+  debugger;
   try {
     // get endpoint and http request options
     const [endpoint, requestOptions] = getUpdateTransactionRequest(id, payload);
@@ -41,7 +42,7 @@ export function* performUpdateTransaction({ id, payload, onSuccess }) {
     // make the request, no need to check the response
     const { data } = yield call(axios, endpoint, requestOptions);
 
-    yield put({ type: SET_TRANSACTION, entry: data });
+    yield put({ type: SET_TRANSACTION, transaction: data });
 
     if (onSuccess) {
       yield call(onSuccess);
@@ -57,7 +58,7 @@ export function* watchForUpdateTransactionRequest() {
 
 export default function* TransactionSaga() {
   yield all([
-    watchForLoadTransactionRequest,
-    watchForUpdateTransactionRequest
+    // watchForLoadTransactionRequest(),
+    watchForUpdateTransactionRequest()
   ]);
 }

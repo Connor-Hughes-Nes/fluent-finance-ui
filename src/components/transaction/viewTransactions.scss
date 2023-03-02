@@ -1,6 +1,6 @@
-.transaction {
-  width: 1139px;
-  height: 653px;
+.transactions {
+  width: 1109px;
+  height: 633px;
   background-color: #1F1F1F;
   padding-top: 80px;
   padding-left: 130px;
@@ -30,22 +30,19 @@
 
     &-type {
       display: flex;
-      flex-direction: row;
+      //flex-direction: row;
+
+      :nth-child(2) {
+        margin-left: -20px;
+      }
     }
 
     &-actions {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
-      margin-right: 725px;
+      margin-left: 50px;
       margin-top: 70px;
       margin-bottom: 40px;
-
-      :nth-child(2) {
-        border: solid 1px #D9D9D9;
-        background-color: transparent;
-        color: #D9D9D9;
-      }
     }
 
     &-view {

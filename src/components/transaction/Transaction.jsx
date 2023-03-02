@@ -34,8 +34,8 @@ const Transaction = ({ onSave }) => {
           <h2 className='transaction__title'>Transactions</h2>
           <main className='transaction__content'>
             <div className="transaction__content-money">
-              <Input value={form.income} type='number' label='enter your monthly income' name='income' onChange={handleChange} />
-              <Input value={form.expense} type='number' label='enter your monthly expenses' name='expense' onChange={handleChange} />
+              <Input value={form.income} prefix='R' type='number' label='enter your monthly income' name='income' onChange={handleChange} />
+              <Input value={form.expense} prefix='R' type='number' label='enter your monthly expenses' name='expense' onChange={handleChange} />
             </div>
             <div className="transaction__content-type">
               <Input value={form.income_type} type='text' label='enter the income type' name='income_type' />
@@ -52,13 +52,5 @@ const Transaction = ({ onSave }) => {
   );
 }
 
-//  "transaction_type"
-//  "transaction_amount"
-//  "total_income"
-//  "expense"
-//  "expense_date"
-//  "income_type"
-//  "expense_amount"
-//  "expense_type"
 
 export default Transaction;

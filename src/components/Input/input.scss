@@ -25,7 +25,12 @@
     align-items: center;
     border: none;
     border-bottom: 1px solid #D9D9D9; //TODO: #FEFEFE for Pressed state
+    width: 320px;
+  }
 
+  &__prefix {
+    padding-left: 5px;
+    font-family: Montserrat, sans-serif;
   }
 }
 

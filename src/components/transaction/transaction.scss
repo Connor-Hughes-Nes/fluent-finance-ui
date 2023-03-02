@@ -28,9 +28,22 @@
       margin-bottom: 30px;
     }
 
+    &-type {
+      display: flex;
+      flex-direction: row;
+    }
+
     &-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-right: 710px;
+      margin-top: 70px;
+      margin-bottom: 40px;
+    }
+
+    &-view {
       margin-left: 50px;
-      margin-top: 50px;
     }
 
     .input {

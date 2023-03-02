@@ -6,8 +6,9 @@
 export const LOAD_TRANSACTION = '[TRANSACTION_STORE] Load Transaction';
 
 export const SET_TRANSACTION = '[TRANSACTION_STORE] Set Transaction';
-export const loadTransaction = (onSuccess) => ({
+export const loadTransaction = (id, onSuccess) => ({
   type: LOAD_TRANSACTION,
+  id,
   onSuccess
 });
 

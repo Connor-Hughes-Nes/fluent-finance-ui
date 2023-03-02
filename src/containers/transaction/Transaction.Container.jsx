@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 
 import Sidebar from '../../components/sidebar/Sidebar';
 import Header from '../../components/header/Header';
@@ -9,35 +8,32 @@ import { ReactComponent as HomeIcon } from '../../icons/home-icon.svg';
 import { ReactComponent as BudgetIcon } from '../../icons/budget-icon.svg';
 import { ReactComponent as TransactionIcon } from '../../icons/transaction-icon.svg';
 
-import { loadTransaction, updateTransaction } from '../../actions/transaction.actions'
+import { updateTransaction } from '../../actions/transaction.actions'
 
 const TransactionContainer = () => {
-  const navigate = useNavigate();
-
   const items = [
     {
       label: "Home",
-      icon: <HomeIcon/>,
-      onClick: navigate('/dashboard')
+      icon: <HomeIcon />,
+      link: '/dashboard'
     },
     {
       label: "Budget",
-      icon: <BudgetIcon/>,
-      onClick: navigate('/budget')
+      icon: <BudgetIcon />,
+      link: '/budget'
     },
     {
       label: "Transactions",
-      icon: <TransactionIcon/>,
-      onClick: navigate('/transaction')
+      icon: <TransactionIcon />,
+      link: '/transaction'
     }
   ];
 
-  const [loading, setLoading] = useState( false); //?
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(loadTransaction(() => setLoading(false)))
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(loadTransaction(() => setLoading(false)))
+  // }, [dispatch])
 
   const onSave = (payload) => {
     // debugger;
@@ -48,7 +44,7 @@ const TransactionContainer = () => {
     <main>
       <Sidebar items={items} />
       <Header />
-      <Transaction onSave={onSave}  />
+      <Transaction onSave={onSave} />
     </main>
   )
 };

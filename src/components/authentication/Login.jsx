@@ -52,6 +52,7 @@ const Login = ({ onLogin }) => {
           placeholder="Password"
           value={form?.password}
           onChange={handleChange}
+          autocomplete="current-password"
         />
       </form>
       <section className="login__form-action">

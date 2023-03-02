@@ -13,7 +13,6 @@ import {
   SET_TRANSACTION, UPDATE_TRANSACTION
 } from '../actions/transaction.actions';
 
-
 // TODO: how this loads but sets as the put action
 export function* performLoadTransaction({ id }) {
   try {
@@ -34,7 +33,7 @@ export function* watchForLoadTransactionRequest() {
 }
 
 export function* performUpdateTransaction({ id, payload, onSuccess }) {
-  debugger;
+  // debugger;
   try {
     // get endpoint and http request options
     const [endpoint, requestOptions] = getUpdateTransactionRequest(id, payload);
@@ -48,7 +47,7 @@ export function* performUpdateTransaction({ id, payload, onSuccess }) {
       yield call(onSuccess);
     }
   } catch ({ response }) {
-    yield put(addSystemNotice(response.data.error, 'Error updating transaction'));
+    // yield put(addSystemNotice(response.data.error, 'Failure'));
   }
 }
 
@@ -58,7 +57,7 @@ export function* watchForUpdateTransactionRequest() {
 
 export default function* TransactionSaga() {
   yield all([
-    // watchForLoadTransactionRequest(),
+    watchForLoadTransactionRequest(),
     watchForUpdateTransactionRequest()
   ]);
 }

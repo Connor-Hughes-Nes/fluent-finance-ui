@@ -1,14 +1,14 @@
 import { API_HOST } from './index';
-import { getHttpGetOptions, getHttpPutOptions } from '@neslotech/utils';
+import { getHttpGetOptions, getHttpPostOptions } from '@neslotech/utils';
 
-
-const getTransactionEndpoint = () => `${API_HOST}/transaction`;
-export const getLoadTransactionRequest = (payload) => [
-  getTransactionEndpoint(),
-  getHttpGetOptions(payload())
+const getTransactionsEndpoint = (id) => `${API_HOST}/transaction/${id}`; //
+export const getLoadTransactionRequest = (id) => [
+  getTransactionsEndpoint(id),
+  getHttpGetOptions() //??
 ];
 
+const getTransactionEndpoint = () => `${API_HOST}/transaction`; //s
 export const getUpdateTransactionRequest = (id, payload) => [
   getTransactionEndpoint(id),
-  getHttpPutOptions(payload)
+  getHttpPostOptions(payload)
 ];

@@ -9,6 +9,7 @@ export const Input = ({
   onChange,
   type,
   value,
+  prefix,
   // min_value,
   // max_value
 }) => {
@@ -26,9 +27,17 @@ export const Input = ({
     onChange(val);
   };
 
+  const renderPrefix = (prefix) =>
+    prefix && (
+      <div className="input__prefix">
+        <span>{prefix}</span>
+      </div>
+    );
+
   return (
     <div className="input">
       <fieldset ref={wrapperRef} className="input__input-wrapper">
+        {renderPrefix(prefix)}
         <input
           type={type}
           id={id ?? name}

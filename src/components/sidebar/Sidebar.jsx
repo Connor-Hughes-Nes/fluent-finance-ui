@@ -26,7 +26,7 @@ const SidebarLogo = () => {
   );
 };
 
-const Sidebar = ({ items, path }) => {
+const Sidebar = ({ items }) => {
 
   return (
     <aside className="sidebar">
@@ -34,9 +34,8 @@ const Sidebar = ({ items, path }) => {
       <ul className="sidebar__items">
         {items.map(({ icon, label, link }) => (
           <Item
-            path={path}
+            path={link}
             icon={icon}
-            link={link}
             key={label}
             label={label}
           />

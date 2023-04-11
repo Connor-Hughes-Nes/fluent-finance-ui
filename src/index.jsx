@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import rootReducer from './reducers';
 import UserContainer from './containers/User.container';
+import TransactionSaga from './sagas/transaction.saga';
 
 import './stylesheets/app.scss';
 
@@ -16,6 +17,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(authSaga);
+sagaMiddleware.run(TransactionSaga)
 
 ReactDOM.render(
   <React.StrictMode>

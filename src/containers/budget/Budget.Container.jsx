@@ -1,32 +1,41 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 
 import Budget from '../../components/budget/Budget'
 import Sidebar from '../../components/sidebar/Sidebar';
 import Header from '../../components/header/Header';
+import { loadTransaction as loadBudget } from '../../actions/transaction.actions';
+
 import { ReactComponent as HomeIcon } from '../../icons/home-icon.svg';
-import { noOp } from '@neslotech/utils';
 import { ReactComponent as BudgetIcon } from '../../icons/budget-icon.svg';
 import { ReactComponent as TransactionIcon } from '../../icons/transaction-icon.svg';
-import { useNavigate } from 'react-router-dom';
 
 const BudgetContainer = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const budget = useSelector(({ transaction_store }) => transaction_store.transaction);
+
+  useEffect(() => {
+    dispatch(loadBudget(15))
+  }, [budget]); // TODO: Fix this
+
+  //select state store and align the value to the input
 
   const items = [
     {
       label: "Home",
       icon: <HomeIcon/>,
-      onClick: navigate('/dashboard')
+      link: '/dashboard'
     },
     {
       label: "Budget",
       icon: <BudgetIcon/>,
-      onClick: navigate('/budget')
+      link: '/budget'
     },
     {
       label: "Transactions",
       icon: <TransactionIcon/>,
-      onClick: navigate('/transaction')
+      link: '/transaction'
     }
   ];
 
@@ -34,7 +43,7 @@ const BudgetContainer = () => {
     <main>
       <Sidebar items={items} />
       <Header />
-      <Budget />
+      <Budget budget={budget} />
     </main>
   )
 };

@@ -43,7 +43,7 @@ const Transaction = ({ onSave }) => {
             </div>
             <div className="transaction__content-actions">
               <Button placeholder="Calculate" label="Calculate" type="submit" onClick={handleSubmit} /> {/*onClick={() => navigate('/dashboard')}*/}
-              <Button placeholder="View All" label="View All" type="submit" onClick={() => navigate('/dashboard')} />
+              <Button placeholder="View All" label="View All" type="submit" onClick={() => navigate('/transactions')} />
             </div>
           </main>
         </header>

@@ -6,12 +6,12 @@ import { Button } from '../button/Button';
 
 import './viewTransactions.scss'
 
-const serverify = () => ({ //form
-  // total_income: form.income,
-  // expense: form.expense,
-  // expense_type: form.expense_type,
-  // income_type: form.income_type
-});
+// const serverify = () => ({ //form
+//   // total_income: form.income,
+//   // expense: form.expense,
+//   // expense_type: form.expense_type,
+//   // income_type: form.income_type
+// });
 
 const ViewTransactions = ({ onSave }) => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const ViewTransactions = ({ onSave }) => {
             <div className="transactions__content-money">
               {/*TODO: Clean up buttons*/}
               <Input value={form.income} prefix='R' type='number' label='income' name='income' onChange={handleChange} />
-              <Input value={form.expense} prefix='R' type='number' label='expenses' name='expense' onChange={handleChange} />
+              <Input value={form.expense} prefix='R' type='number' label='expense' name='expense' onChange={handleChange} />
               <Input value={form.expense} prefix='R' type='number' label='budget goal' name='expense' onChange={handleChange} />
             </div>
             <div className="transactions__content-type">

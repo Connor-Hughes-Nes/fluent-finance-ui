@@ -15,7 +15,6 @@ const DashboardCard = ({ title }) => (
 
 DashboardCard.defaultProps = {
   items: []
-  // icon: sv
 };
 
 export default DashboardCard;
